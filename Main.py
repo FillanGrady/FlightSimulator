@@ -33,7 +33,7 @@ def draw(w, engine, time):
     pygame.draw.rect(window, (0, 255, 0), (10, 100, 100 * engine, 20), 0)
     pygame.draw.rect(window, (255, 0, 0), (10, 100, 100, 20), 1)
     pygame.draw.circle(window, (0, 0, 255), (30, 50), 20, 1)
-    pygame.draw.circle(window, (255, 0, 0), (xScreenSize / 2, yScreenSize / 2), 20, 1)
+    pygame.draw.circle(window, (255, 0, 0), (xScreenSize // 2, yScreenSize // 2), 20, 1)
     angle = -3 * math.pi / 4 + math.pi * velocity / 20
     pygame.draw.line(window, (255, 0, 0), (30, 70), (30 + 30 * math.cos(angle), 70 + 30 * math.sin(angle)), 3)
     pygame.display.flip()
@@ -52,7 +52,7 @@ try:
     f.close()
 except IOError:
     highScore = 0
-print "Use arrow keys to move.  Use 1 and 2 to control the engine"
+print("Use arrow keys to move.  Use 1 and 2 to control the engine")
 Running = True
 xScreenSize = 700
 yScreenSize = 700
